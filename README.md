@@ -121,7 +121,11 @@ Invoke-RestMethod -Method Post -Uri "http://localhost:3000/api/alerts/check?key=
 ### Cron jobs
 
 Файл `vercel.json` уже содержит расписание:
-- `/api/sync` — каждые 15 минут
-- `/api/alerts/check` — каждые 5 минут
+- `/api/sync` — ежедневно в `03:00` (UTC)
+- `/api/alerts/check` — ежедневно в `03:05` (UTC)
 
 После деплоя Vercel автоматически начнёт вызывать эти пути.
+
+Примечание:
+- На тарифе **Vercel Hobby** cron-джобы ограничены запуском **не чаще 1 раза в день**.
+- Расписание в `vercel.json` задаётся в **UTC**.
