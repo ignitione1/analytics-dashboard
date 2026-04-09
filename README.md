@@ -117,7 +117,7 @@ Invoke-RestMethod -Method Post -Uri "http://localhost:3000/api/alerts/check?key=
 2) В Vercel: **New Project** → импорт репозитория.
 3) В Vercel Project → **Settings → Environment Variables** добавь все переменные из `.env.local`.
 4) Деплой.
-
+ 
 ### Cron jobs
 
 Файл `vercel.json` уже содержит расписание:
